@@ -1,0 +1,27 @@
+#Don't copy and paste code , use it only for reference
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+int main() {
+    int input;
+    scanf("%d",&input);
+
+    char* str[]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+    char* gtn = "Greater than 9";
+
+if(input<=9){
+    printf("%s\n",str[input]); }
+    else { printf("%s\n",gtn);
+    }
+
+return 0; 
+}
