@@ -1,0 +1,45 @@
+# Don't copy and paste it directly , please take a refernce only
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int isPrime(int n) {
+    if (n <= 1) {
+        return 0;
+    }
+    for (int i = 2; i*i <= n; i++) {
+        if (n % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int reverseNumber(int n) {
+    int reversed = 0;
+    while (n != 0) {
+        reversed = reversed * 10 + n % 10;
+        n /= 10;
+    }
+    return reversed;
+}
+
+int isPalindrome(int n) {
+    return n == reverseNumber(n);
+}
+
+int main() {
+    int number;
+    scanf("%d", &number);
+
+    if (isPrime(number) && isPalindrome(number)) {
+        printf("YES");
+    } else {
+        printf("NO");
+    }
+
+    return 0;
+}
+
